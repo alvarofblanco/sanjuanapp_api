@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sanjuans",
+  "info": {
+    "singularName": "sanjuan",
+    "pluralName": "sanjuans",
+    "displayName": "sanjuan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "lat-lng.lat-lng"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "sanjuans"
+    }
+  }
+}

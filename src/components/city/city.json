@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_city_cities",
+  "info": {
+    "displayName": "city"
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "displayName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
